@@ -4,8 +4,110 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <h2>Shopping Cart</h2>
+    <header class="main-header">
+      <div class="navbar bg-base-100">
+        <div class="flex-1">
+          <a class="btn btn-ghost normal-case text-xl">The Generics</a>
+        </div>
+        <div class="flex-none">
+          <nav class="main-nav nav">
+            <ul class="flex gap-4">
+              <li><a href="index.html">STORE</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="container mx-auto max-w-[1440px] px-4">
+      <section class="container content-section">
+        <h2 class="mb-6 text-4xl">MUSIC</h2>
+        <div class="shop-items grid grid-cols-4 gap-4">
+          <div class="card card-compact bg-base-100 shadow-xl">
+            <figure><img src="images/album1.png" class="w-full" alt="Album" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Album 1</h2>
+              <p class="price font-bold text-2xl">$12.99</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary">ADD TO CART</button>
+              </div>
+            </div>
+          </div>
+          <div class="card card-compact bg-base-100 shadow-xl">
+            <figure><img src="images/album2.png" class="w-full" alt="Album" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Album 2</h2>
+              <p class="price font-bold text-2xl">$14.99</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary">ADD TO CART</button>
+              </div>
+            </div>
+          </div>
+          <div class="card card-compact bg-base-100 shadow-xl">
+            <figure><img src="images/album3.png" class="w-full" alt="Album" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Album 3</h2>
+              <p class="price font-bold text-2xl">$9.99</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary">ADD TO CART</button>
+              </div>
+            </div>
+          </div>
+          <div class="card card-compact bg-base-100 shadow-xl">
+            <figure><img src="images/album4.png" class="w-full" alt="Album" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Album 4</h2>
+              <p class="price font-bold text-2xl">$19.99</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary">ADD TO CART</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container content-section mt-12">
+        <h2 class="text-4xl my-6">MERCH</h2>
+        <div class="shop-items grid grid-cols-4 gap-4">
+          <div class="card card-compact bg-base-100 shadow-xl">
+            <figure><img src="images/shirt.png" class="w-full" alt="Album" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">T-Shirt</h2>
+              <p class="price font-bold text-2xl">$19.99</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary">ADD TO CART</button>
+              </div>
+            </div>
+          </div>
+          <div class="card card-compact bg-base-100 shadow-xl">
+            <figure class="min-h-[340px]"><img src="images/coffee.png" class="w-full" alt="Album" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Coffee Cup</h2>
+              <p class="price font-bold text-2xl">$6.99</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary">ADD TO CART</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container content-section px-4 max-w-[1440px] mx-auto mt-12">
+        <h2 class="text-4xl mb-6">CART</h2>
+        <div class="flex w-full items-center justify-between">
+          <span class="cart-item cart-header mb-4">ITEM</span>
+          <span class="cart-price cart-header mb-4">PRICE</span>
+          <span class="cart-quantity cart-header mb-4">QUANTITY</span>
+        </div>
+        <div class="cart-items"></div>
+        <div class="cart-total">
+          <strong class="cart-total-title">Total</strong>
+          <span class="cart-total-price">$0</span>
+        </div>
+        <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+      </section>
+    </main>
+    <script src="js/cart.js"></script>
   </body>
 </html>
